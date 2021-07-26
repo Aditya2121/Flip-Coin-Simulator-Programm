@@ -11,10 +11,21 @@ do
 		echo "HEADS"
 		Hcount=$(($Hcount + 1))
 
+		if [ $Hcount == 21 ]
+		then
+			break
+		fi
 	else
 		echo "TAILS"
 		Tcount=$(($Tcount + 1))
 
+		if [ $Tcount == 21 ]
+                then
+                        break
+                fi
+
 	fi
 done
 
+echo "Head = $Hcount"
+echo "Tail = $Tcount"
